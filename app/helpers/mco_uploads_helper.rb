@@ -1,0 +1,2 @@
+module McoUploadsHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @mco_upload.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @mco_upload.last_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @mco_upload.dob %>
+</p>
+
+<p>
+  <strong>Medicaid:</strong>
+  <%= @mco_upload.medicaid_id %>
+</p>
+
+<p>
+  <strong>Alert:</strong>
+  <%= @mco_upload.alert %>
+</p>
+
+<%= link_to 'Edit', edit_mco_upload_path(@mco_upload) %> |
+<%= link_to 'Back', mco_uploads_path %>

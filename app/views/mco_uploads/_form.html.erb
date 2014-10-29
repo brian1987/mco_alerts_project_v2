@@ -1,0 +1,44 @@
+<%= form_for(@mco_upload) do |f| %>
+  <% if @mco_upload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mco_upload.errors.count, "error") %> prohibited this mco_upload from being saved:</h2>
+
+      <ul>
+      <% @mco_upload.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  
+  <!-- Scaffolded field below -->
+  <!-- <div class="field"> -->
+    <%#= f.label :dob %><br>
+    <%#= f.date_select :dob %>
+  <!-- </div> -->
+
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_field :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :medicaid_id %><br>
+    <%= f.text_field :medicaid_id %>
+  </div>
+  <div class="field">
+    <%= f.label :alert %><br>
+    <%= f.text_area :alert %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
